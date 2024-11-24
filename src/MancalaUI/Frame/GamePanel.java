@@ -168,43 +168,55 @@ public class GamePanel extends JPanel {
     }
 
     private void handleMove(int pitIndex) {
+        // Check if move is valid
         if (!model.isValidMove(new MancalaMove(pitIndex))) {
             JOptionPane.showMessageDialog(this, "Invalid move! Try again.");
             return;
         }
 
+        // Make the move for the current player
         model.makeMove(new MancalaMove(pitIndex));
         refreshBoard();
 
-        // Check game over condition
+        // Check if the game is over
         if (model.isGameOver()) {
             JOptionPane.showMessageDialog(this, "Game Over! Winner: Player " +
                     (model.getScore(0) > model.getScore(1) ? "A" : "B"));
             return;
         }
 
-        // AI's turn if enabled and current player is B
+        // Switch turn or invoke AI
         if (isAgainstAI && model.getCurrentPlayer() == 1) {
+            // AI's turn (Player B)
             performAIMove();
         } else {
+            // Update the turn indicator for the next player
             playerTurnLabel.setText("Player " + (model.getCurrentPlayer() == 0 ? "A" : "B") + "'s Turn");
         }
     }
 
+
     private void performAIMove() {
         JOptionPane.showMessageDialog(this, "AI is making a move...");
+
+        // Perform AI move for Player B
         Vector<Object> result = search.performAlphaBeta(model, GameSearch.PROGRAM);
         Position bestMove = (Position) result.elementAt(1);
+
+        // Apply the AI's move
         model = (MancalaPosition) bestMove;
         refreshBoard();
 
+        // Check if the game is over after AI's move
         if (model.isGameOver()) {
             JOptionPane.showMessageDialog(this, "Game Over! Winner: Player " +
                     (model.getScore(0) > model.getScore(1) ? "A" : "B"));
         } else {
-            playerTurnLabel.setText("Player " + (model.getCurrentPlayer() == 0 ? "A" : "B") + "'s Turn");
+            // Update the turn indicator for the next player
+            playerTurnLabel.setText("Player A's Turn"); // Always back to Player A
         }
     }
+
 
     private void saveGame() {
         String filename = JOptionPane.showInputDialog(this, "Enter filename to save:");

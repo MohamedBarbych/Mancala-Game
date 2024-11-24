@@ -34,18 +34,21 @@ public class MancalaSearch extends GameSearch {
         MancalaPosition pos = (MancalaPosition) p;
         Vector<Position> moves = new Vector<>();
 
-        // Générer les mouvements possibles
-        for (int i = 0; i < 6; i++) {
-            int pit = player ? i : i + 7;
-            if (pos.getBoard()[pit] > 0) {
+        // Generate moves only for the correct player's pits
+        int startPit = player ? 7 : 0; // Player B pits start at 7, Player A pits start at 0
+        int endPit = player ? 13 : 6; // Player B pits end at 12, Player A pits end at 5
+
+        for (int i = startPit; i < endPit; i++) {
+            if (pos.getBoard()[i] > 0) { // Check if pit has stones
                 MancalaPosition cloned = (MancalaPosition) pos.clone();
-                cloned.makeMove(new MancalaMove(pit));
+                cloned.makeMove(new MancalaMove(i));
                 moves.add(cloned);
             }
         }
 
         return moves.toArray(new Position[0]);
     }
+
 
     @Override
     public Position makeMove(Position p, boolean player, Move move) {
