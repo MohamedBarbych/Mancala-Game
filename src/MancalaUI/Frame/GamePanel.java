@@ -48,6 +48,10 @@ public class GamePanel extends JPanel {
 
         refreshBoard(); // Mise à jour initiale du plateau
     }
+    public void setModel(MancalaPosition loadedModel) {
+        this.model = loadedModel; // Update the model with the loaded game state
+        refreshBoard();           // Refresh the board to reflect the loaded game state
+    }
 
     public void configureGame(int opponentType, int complexity, String strategy, String heuristic) {
         model.setComplexity(complexity);
@@ -76,11 +80,14 @@ public class GamePanel extends JPanel {
         pitsPanel.setBackground(new Color(139, 69, 19));
         pitPanels = new JPanel[2][6];
 
-        // Ligne supérieure (B6 → B1)
-        for (int i = 5; i >= 0; i--) {
+        // Ligne supérieure (B6 ← B5 ← B4 ← B3 ← B2 ← B1)
+        for (int i = 0; i < 6; i++) {
+            // Reverse the numbering by subtracting i from 6
             pitPanels[1][i] = createPitPanel("B" + (6 - i), i + 7);
             pitsPanel.add(pitPanels[1][i]);
         }
+
+
 
         // Ligne inférieure (A1 → A6)
         for (int i = 0; i < 6; i++) {
