@@ -50,7 +50,7 @@ _Description: Displays the rules of Mancala, helping new players understand how 
 ---
 
 ### Game Screen
-![image](https://github.com/user-attachments/assets/a42033d7-37d2-4dad-be42-c379bf26bc8d)
+![image](https://github.com/user-attachments/assets/862df50c-a2e0-4b93-9435-9bfe255bc2b9)
 
 _Description: The main gameplay area. Players can interact with the pits and see their moves visualized._
 
