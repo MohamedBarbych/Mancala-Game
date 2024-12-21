@@ -8,7 +8,7 @@ This repository contains a Java-based implementation of the classic **Mancala** 
 ## Features
 
 - **Beautiful GUI:** A modern and responsive design using Java Swing components.
-- **AI Opponent:** Play against the computer with different strategies and complexities using Alpha-Beta algorithm.
+- **AI Opponent:** Play against the computer with different strategies and complexities using the Alpha-Beta algorithm.
 - **Save & Load Game:** Save your progress and resume later.
 - **Customizable Configuration:** Adjust the game's complexity, strategy, and heuristic.
 
