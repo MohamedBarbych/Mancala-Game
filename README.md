@@ -11,7 +11,7 @@ This repository contains a Java-based implementation of the classic **Mancala** 
 - **AI Opponent:** Play against the computer with different strategies and complexities using the Alpha-Beta algorithm.
 - **Save & Load Game:** Save your progress and resume later.
 - **Customizable Configuration:** Adjust the game's complexity, strategy, and heuristic.
-
+    
 ### AI Strategy: Alpha-Beta Pruning
 
 This project uses the **Alpha-Beta pruning algorithm** as the core AI strategy for Player B when the "AI" option is selected. Alpha-Beta pruning optimizes the Minimax algorithm by reducing the number of game states the AI evaluates, ensuring efficient and intelligent decision-making. The AI evaluates moves using a heuristic function that considers the number of stones in each player's Mancala and the pits' states. This allows the AI to simulate several moves ahead, choosing the optimal move while adhering to the configured complexity and strategy (offensive or defensive). The AI will always turn as Player B immediately after Player A's move.
@@ -117,3 +117,5 @@ To commit your changes and push them to the repository, follow these steps:
 git add .
 git commit -m "Add new feature"
 git push origin feature-name
+```
+Thank you!
