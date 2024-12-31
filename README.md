@@ -83,7 +83,7 @@ Follow these steps to set up and run the Mancala game on your local machine:
 
 ---
 
-## Game Rules
+## Game Rules               
 
 ### Objective
 The goal is to collect the most stones in your Mancala (storage pit) by the end of the game.
@@ -110,12 +110,12 @@ Contributions are welcome! Please follow these steps to contribute :
    git checkout -b feature-name
 
 ## Commit Your Changes and Push Them
-
+             
 To commit your changes and push them to the repository, follow these steps:
 
 ```bash
 git add .
-git commit -m "Add new feature"
+git commit -m "Add new feature"            
 git push origin feature-name
 ```
 Thank you!
