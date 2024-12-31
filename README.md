@@ -1,14 +1,14 @@
 # Mancala Game
 
-This repository contains a Java-based implementation of the classic **Mancala** board game. The project is built using **Java Swing** for its graphical user interface (GUI), making it interactive and visually appealing. The game supports two modes :
+This repository contains a Java-based implementation of the classic **Mancala** board game. The project is built using **Java Swing** for its graphical user interface (GUI), making it interactive and visually appealing. The game supports two modes :       
 - **Player vs. Player**
 - **Player vs. AI**
-![image](https://github.com/user-attachments/assets/b1b61dc5-cd08-4f3d-b15d-ff630387749f)
+![image](https://github.com/user-attachments/assets/b1b61dc5-cd08-4f3d-b15d-ff630387749f)   
 
 ## Features
 
 - **Beautiful GUI:** A modern design using Java Swing components.
-- **AI Opponent:** Play against the computer with different strategies and complexities using the Alpha-Beta algorithm.
+- **AI Opponent:** Play against the computer with different strategies and complexities using the Alph-Beta algorithm.
 - **Save & Load Game:** Save your progress and resume later.
 - **Customizable Configuration:** Adjust the game's complexity, strategy, and heuristic.
     
@@ -20,8 +20,8 @@ This project uses the **Alpha-Beta pruning algorithm** as the core AI strategy f
 
 1. [Screenshots](#screenshots)
 2. [Installation](#installation)
-3. [Usage](#usage)
-4. [Game Rules](#game-rules)
+3. [Usage](#usage)                        
+4. [Game Rules](#game-rules)  
 5. [Contributing](#contributing)
 6. [License](#license)
 
