@@ -18,7 +18,7 @@ This project uses the **Alpha-Beta pruning algorithm** as the core AI strategy f
 
 ## Table of Contents
 
-1. [Screenshots](#screenshots)
+1. [Screenshots](#screenshots)             
 2. [Installation](#installation)
 3. [Usage](#usage)                        
 4. [Game Rules](#game-rules)  
